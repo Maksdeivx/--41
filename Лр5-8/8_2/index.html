@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>IT-soft</title>
+        <link rel="stylesheet" href="../8_2//bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../8_2/style.css">
+        <meta charset = "UTF-8">
+        <meta name="description" content="Компания IT-soft, оказывает услуги по аренде серверов">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+        <meta name="author" content="Козейко Максим">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+<img src="../8_2/images/logo.png" width="60" height="60" style="padding:10px;" alt="Логотип">
+<p>IT-soft</p>
+<nav style="align-self: center;">
+    <li style="display:flex;">
+        <ul style="margin-bottom: 0px;">Пункт</ul>
+        <ul style="margin-bottom: 0px;">Пункт</ul>
+        <ul style="margin-bottom: 0px;">Пункт</ul>
+        <ul style="margin-bottom: 0px;">Пункт</ul>
+        <ul style="margin-bottom: 0px;">Пункт</ul>
+    </li>
+</nav>
+<button class="burger" data-bs-toggle="modal" data-bs-target="#burger-menu"><img src="../images/бургер_меню.png"></button>
+        </header>
+        <div class="modal fade" id="burger-menu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body burger-menu">
+          <nav class="burger-nav pb-4">
+            <a href="#">Пункт</a>
+            <a href="#">Пункт</a>
+            <a href="#">Пункт</a>
+            <a href="#">Пункт</a>
+            <a href="#">Пункт</a>
+          </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="container form-product-container">
+            <div class="form-section">
+                <h1 class="form-title">Анкета регистрации участника программы <br>"ПРИГЛАШАЕМ"</h1>
+                <p class="form-description">После регистрации Вы сможете обменивать накопленные бонусы на скидки при совершении покупок в аптеках сети "Ольга".</p>
+
+                <div class="form-group">
+                    <label for="barcode">Введите штрих-код Вашей карты*:</label>
+                    <input type="text" id="barcode">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Имя*:</label>
+                    <input type="text" id="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="surname">Отчество:</label>
+                    <input type="text" id="surname">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Дата рождения*:</label>
+                    <input type="text" id="dob" placeholder="ДД.ММ.ГГГГ">
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Пол*:</label>
+                    <input type="text" id="gender">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Мобильный телефон*:</label>
+                    <input type="text" id="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email">
+                </div>
+
+                <p class="required-fields">* Поля, обязательные для заполнения</p>
+
+                <div class="radio-group">
+                    <input type="radio" id="info-all" name="info-type" checked>
+                    <label for="info-all">Я желаю получать информацию об акциях программы, скидках и распродажах</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="info-no" name="info-type">
+                    <label for="info-no">Я не желаю получать информацию об акциях программы</label>
+                </div>
+
+                <div class="form-group verification-group">
+                    <label for="verification-code">Код подтверждения*:</label>
+                    <div class="verification-input-wrapper">
+                        <input type="text" id="verification-code">
+                        <button class="send-sms-button">Выслать SMS раз</button>
+                    </div>
+                </div>
+
+                <div class="checkbox-group privacy-policy">
+                    <input type="checkbox" id="privacy-agreement" checked>
+                    <label for="privacy-agreement">Я согласен на обработку персональных данных и ознакомлен с правилами программы</label>
+                </div>
+
+                <button class="submit-button">Применить</button>
+            </div>
+
+            <div class="product-ad-section">
+                <div class="product-details">
+                    <h2 class="ad-title">ORIGAMMI DESIGN CHAIR</h2>
+                    <p class="ad-subtitle">HAMMERHEAD</p>
+                    <p class="ad-price">€685</p>
+
+                    <div class="ad-tabs">
+                        <span class="active">DESCRIPTION</span><span>DETAILS</span>
+                    </div>
+
+                    <p class="ad-description">
+                        With a wide predatory stance that is streamlined for dynamic speed the Hammerhead is inherently a visually exciting new typology for seating that avoids the recycling and reissuing of how a new chair form can exist. The gill
+                    </p>
+
+                    <div class="ad-options">
+                        <span class="option-label">COLOR</span>
+                        <div class="color-options">
+                            <div class="color-dot brown"></div>
+                            <div class="color-dot gray"></div>
+                        </div>
+                    </div>
+
+                    <div class="ad-options">
+                        <span class="option-label">QUANTITY</span>
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+
+                    <div class="total-price">
+                        <span class="label">TOTAL PRICE</span>
+                        <span class="value">€3425</span>
+                    </div>
+
+                    <button class="add-to-cart-button">ADD TO CARD</button>
+                </div>
+                <div class="product-image-carousel">
+                    <img src="../изображение.png" alt="Origammi Design Chair">
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="First-block"><div>
+                <h2>Аренда выделенного сервера</h2>
+                <p>Инвестируйте в развитие своего бизнеса, а не в закупку, обслуживание и обновление собственного серверного оборудования.
+                    Мы предоставим в аренду новейшие серверы с любыми параметрами в лучших дата-центрах страны и возьмем на себя их полное обслуживание.</p>
+            </div>
+            <img src="../8_2/images/kartinka1.png" alt="Картинка">
+        </div>
+        <div class="Second-block"><div class="info">
+                <img src="../8_2/images/server.png" alt="Картинка" style="width:140%; height:200px;">
+                <p>IT-soft — надёжный провайдер аренды серверов для бизнеса и частных клиентов. Мы предлагаем высокопроизводительные, стабильные и безопасные серверные решения, адаптированные под задачи любого уровня — от небольших проектов до крупных корпоративных систем.
+                    Наша цель — обеспечить максимальную доступность и производительность серверных мощностей по справедливой цене. В нашем распоряжении — современные дата-центры, круглосуточный мониторинг и техподдержка, а также гибкая система настройки и масштабирования под нужды клиента.
+                    С IT-soft вы получаете не просто сервер — вы получаете уверенность в стабильной работе своего проекта.</p>
+            </div>
+            <div class="advantages">
+                <h3>Преимущества:</h3>
+                <h4 style="margin-bottom:0px;">Быстро</h4>
+                <p style="margin-top:0px;">Мгновенное развертывание серверов и высокая скорость работы без задержек</p>
+                <h4 style="margin-bottom:0px;">Удобно</h4>
+                <p style="margin-top:0px;">Простая панель управления, гибкие тарифы и поддержка, понятная даже новичкам</p>
+                <h4 style="margin-bottom:0px;">Надежно</h4>
+                <p style="margin-top:0px;">Стабильная работа 24/7, защита данных и профессиональный технический контроль</p>
+            </div>
+        </div>
+        <div class="Third-block"><div class="white-block">
+                <h3>Виртуальные серверы (VPS/VDS)</h3>
+                <p>Мощные виртуальные серверы на SSD-дисках с полным доступом и гибкими настройками</p>
+            </div>
+            <div class="white-block">
+                <h3>Выделенные серверы</h3>
+                <p>Физические серверы для проектов с высокими требованиями к производительности и безопасности</p>
+            </div>
+            <div class="white-block">
+                <h3>Облачное хранилище</h3>
+                <p>Надёжное и масштабируемое решение для хранения и резервного копирования данных</p>
+            </div>
+            <div class="white-block">
+                <h3>Техническая поддержка 24/7</h3>
+                <p>Круглосуточная помощь наших специалистов, быстрая реакция на любые вопросы и задачи</p>
+            </div>
+        </div>
+        <div class="fourth-block"><img src="../8_2/images/серверы.png" alt="Серверы">
+            <img src="../8_2/images/серверы.png" alt="Серверы">
+            <img src="../8_2/images/серверы.png" alt="Серверы">
+            <img src="../8_2/images/серверы.png" alt="Серверы">
+        </div>
+        <div class="fifth-block"><div class="review">
+                <img src="../8_2/images/отзыв.jpg" style="width:80%;height: 250px;" alt="Отзыв">
+                <p>Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.</p>
+            </div>
+            <div class="review">
+                <img src="../8_2/images/отзыв.jpg" style="width:80%;height: 250px;" alt="Отзыв">
+                <p>Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.</p>
+            </div>
+            <div class="review">
+                <img src="../8_2/images/отзыв.jpg" style="width:80%;height: 250px;" alt="Отзыв">
+                <p>Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.</p>
+            </div>
+            <div class="review">
+                <img src="../8_2/images/отзыв.jpg" style="width:80%;height: 250px;" alt="Отзыв">
+                <p>Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.</p>
+            </div>
+        </div>
+        <div class="sixth-block"><div>
+                <img src="../8_2/images/базовый.jpg" style="width:60%;height: 150px;" alt="Тариф">
+                <h4>Базовый</h4>
+                <p>Идеален для простых задач и тестовых проектов. Минимальный набор ресурсов по доступной цене.</p>
+            </div>
+            <div>
+                <img src="../8_2/images/стандарт.png" style="width:60%;height: 150px;" alt="Тариф">
+                <h4>Стандарт</h4>
+                <p>Оптимальное решение для небольших сайтов и приложений. Баланс мощности и стоимости.</p>
+            </div>
+            <div>
+                <img src="../8_2/images/премиум.png" style="width:60%;height: 150px;" alt="Тариф">
+                <h4>Премиум</h4>
+                <p>Повышенная производительность и расширенные возможности для серьёзных проектов.</p>
+            </div>
+            <div>
+                <img src="../8_2/images/бизнес.jpg" style="width:60%;height: 150px;" alt="Тариф">
+                <h4>Бизнес</h4>
+                <p>Максимальные ресурсы, высокая надёжность и приоритетная поддержка для корпоративных клиентов.</p>
+            </div>
+        </div>
+        <div class="seventh-block"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75613.38952658689!2d23.76845143135408!
+        3d53.68407932512692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dfd64beac55d1d%3A0xf013fd265697
+        18c0!2z0JPRgNC-0LTQvdC-LCDQk9GA0L7QtNC90LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1sru!2sby!4v174976010
+        9354!5m2!1sru!2sby" height="460" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <h2>Контактная информация</h2>
+                <p>Свяжитесь с нами удобным для вас способом — мы всегда на связи и готовы помочь!</p>
+
+                <p>Адрес:</p>
+                <p>г. Гродно, Республика Беларусь</p>
+
+                <p>Телефон:</p>
+                <p>+375 (XX) XXX-XX-XX</p>
+
+                <p>E-mail:</p>
+                <p>info@it-soft.by</p>
+
+                <p>Режим работы:</p>
+                <p>Пн–Пт: 9:00–18:00</p>
+                <p>Сб–Вс: по предварительной договорённости</p>
+
+                <p>Мы в сети:</p>
+                <p>Telegram, Viber, WhatsApp — пишите нам напрямую!</p>
+            </div>
+        </div>
+        <footer>
+            <nav>
+                <ul>
+                    <li>Главная</li>
+                    <li>О компании</li>
+                    <li>Услуги</li>
+                    <li>Тарифы</li>
+                    <li>Преимущества</li>
+                    <li>Контакты</li>
+                    <li>Вопросы и ответы (FAQ)</li>
+                    <li>Политика конфиденциальности</li>
+                </ul>
+            </nav>
+            <div>
+                <h4>Мы в социальных сетях:</h4>
+                <ul>
+                    <li>Telegram</li>
+                    <li>Viber</li>
+                    <li>WhatsApp</li>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Правовая информация</h4>
+                <p>Политика конфиденциальности</p>
+                <p>Пользовательское соглашение</p>
+            </div>
+            <div>
+                <h4>© IT-soft, 2025</h4>
+                <p>Все права защищены.</p>
+                <p>г. Гродно, Республика Беларусь</p>
+            </div>
+        </footer>
+
+    <script src="/8_2/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>

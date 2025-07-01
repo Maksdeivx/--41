@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Сайт-шпаргалка</title>
+        <meta charset = "UTF-8">
+        <meta name="description" content="Сайт-шпаргалка для начинающих в изучении HTML">
+        <meta name="keywords" content="HTML, CSS, Сайт-шпаргалка">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+        <meta name="author" content="Козейко Максим">
+    </head>
+    <body>
+        <header>
+            <h1>Это пример шапки(header) сайта</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/Maksdeivx">Мой GitHub</a></li>
+                    <li><a href="https://pin.it/44IY3fMLU">Мой Pinterest</a></li>
+                </ul>
+            </nav>
+            <a href="#link">Перейти к форме авторизации</a>
+        </header>
+        <h1 align="center">Это заголовок h1</h1>
+        <h2 align="center">Это заголовок h2</h2>
+        <h3 align="center">Это заголовок h3</h3>
+        <h4 align="center">Это заголовок h4</h4>
+        <h5 align="center">Это заголовок h5</h5>
+        <h6 align="center">Это заголовок h6</h6>
+        <p align="left"><font size ="5">Это первый абзац</font></p>
+        <p align="left"><font size ="5"><i>Это курсивный текст</i></font></p>
+        <p align="left"><font size ="5"><u>Это подчеркнутый текст</u></font></p>
+        <p align="left"><font size ="5"><b>Это жирный текст</b></font></p>
+        <p align="left"><font size ="5"><del>Это зачеркнутый текст</del></font></p>
+        <p align="left"><font size ="5">Это<sub> подстрочный текст</sub></font></p>
+        <p align="left"><font size ="5">Это<sup> надстрочный текст</sup></font></p>
+        <p align="center"><font size = "5"><b>Список моих навыков</b></font></p>
+        <ol><font size="5">
+            <li>Постановка целей</li>
+            <li>Ответственность</li>
+            <li>Объективность</li>
+            <li>Грамотность</li>
+            </font>
+        </ol>
+        <p align="center"><font size = "5"><b>Список моих хобби</b></font></p>
+        <ul><font size="5">
+            <li>Настольный теннис</li>
+            <li>Компьютерные игры</li>
+            <li>Путешествия</li>
+        </font>
+        </ul>
+        <p align="center"><font size = "5"><b>Список любимых языков программирования</b></font></p>
+        <dl><font size = "5">
+            <dt><b>Python</b></dt>
+            <dd>Python представляет популярный высокоуровневый язык программирования, который предназначен для создания приложений различных типов.</dd>
+            <dt><b>C#</b></dt>
+            <dd>C# — это современный, инновационный, с открытым исходным кодом, кросс-платформенный объектно-ориентированный язык программирования и один из 5 лучших языков программирования на GitHub.</dd>
+            <dt><b>Assembler</b></dt>
+            <dd>Ассемблеры представляют собой языки низкого уровня, предназначеные для прямого доступа к аппаратным ресурсам компьютера.</dd>
+        </font>
+        </dl>
+        <a href="/media/index.html"><p align="center"><font size = "5"><b>Для перехода к разделу с медиафайлами нажмите на ссылку</b></font></p></a>
+        <a href="/media/tables/index.html"><p align="center"><font size = "5"><b>Для перехода к разделу с таблицами нажмите на ссылку</b></font></p></a>
+        <p align="left" id="link"><font size = "5"><b>Пример формы авторизации:</b></font></p>
+        <form action="" method="POST">
+            <fieldset>
+            <p>Ваш логин: 
+            <input type="text" name="login" size="15" maxlength="30" value="Ваше имя">  
+            </p> 
+            <p>Пароль: <input type="password" name="password" size="15" maxlength="30">  
+            </p>
+            <p>Выберите вариант</p>
+            <select name="form_select">
+                <option value="Значение 1">Первый</option>
+                <option value="Значение 2">Второй</option>
+                <option  selected="selected" value="Значение 3">Третий</option>
+                <option value="Значение 4">Четвертый</option>
+                <option value="Значение 5">Пятый</option>
+            </select>
+            <p>
+            <label>Возраст: <input type="text" name="age"></label><br>
+            Пол :
+            <input id="woman" type="radio" name="pol" value="w">
+            <label for="woman">Жeнcкий</label>
+            <input id="man" type="radio" name="pol" value="m">
+            <label for="man">Myжcкoй</label> 
+            </p>
+            <p>
+            <label for="depart">Введите дату:</label>
+            <input type="date" name="date">
+            </p>
+            <p>Введите email:<input type="email" name="email" maxlength="20"></p>
+            <p>    <label for="form-tel">Телефон:</label>
+                <input type="tel" name="telephone" id="form-tel"></p>
+            <input type="submit">
+            <input type="reset">
+            </fieldset>
+          </form>
+          
+
+
+
+    </body>
+    </html>

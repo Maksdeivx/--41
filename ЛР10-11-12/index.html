@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Карточка</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function showCurrentMonth() {
+            const now = new Date(); 
+            const month = now.getMonth() + 1; 
+            alert('Текущий месяц: ' + month); 
+        }
+    </script>
+</head>
+<body>
+    <h1>Узнать текущий месяц (задание 1)</h1>
+    <button onclick="showCurrentMonth()">Показать месяц</button>
+
+
+
+
+
+<h2>Вывод имени и фамилии (Задание 2)</h2>
+    <button onclick="displayMyName()">Вывести имя и фамилию</button>
+    <div id="nameOutput">
+        </div>
+
+    <script>
+        function displayMyName() {
+            const firstName = "Максим";
+            const lastName = "Козейко";
+            const n = 10;
+            const repeatCount = n + 5; // 10 + 5 
+
+            let outputHtml = "<h3>Ваше имя и фамилия, выведенные " + repeatCount + " раз:</h3>";
+            let counter = 0;
+
+            while (counter < repeatCount) {
+                outputHtml += "<p>" + (counter + 1) + ". " + lastName + " " + firstName + "</p>";
+                counter++;
+            }
+
+            document.getElementById('nameOutput').innerHTML = outputHtml;
+        }
+    </script>
+
+
+
+
+
+
+
+    <h2>Работа с массивами и циклами (задание 3)</h2>
+    <button onclick="processArray()">Выполнить операции с массивом</button>
+    <div id="arrayOutput">
+        </div>
+
+    <script>
+        function processArray() {
+
+            const originalArray = [];
+            for (let i = 0; i < 7; i++) {
+
+                originalArray.push(Math.floor(Math.random() * 100) + 1);
+            }
+
+            let output = "<h3>Исходный массив:</h3>";
+            output += "<p>" + originalArray.join(', ') + "</p>";
+
+            let maxElement = originalArray[0]; 
+            for (let i = 1; i < originalArray.length; i++) {
+                if (originalArray[i] > maxElement) {
+                    maxElement = originalArray[i];
+                }
+            }
+            output += "<h3>Максимальный элемент:</h3>";
+            output += "<p>" + maxElement + "</p>";
+
+
+            const modifiedArray = [...originalArray]; 
+            modifiedArray.pop(); 
+
+            output += "<h3>Измененный массив (после удаления последнего элемента):</h3>";
+            output += "<p>" + modifiedArray.join(', ') + "</p>";
+
+ 
+            document.getElementById('arrayOutput').innerHTML = output;
+        }
+    </script>
+
+
+
+
+
+    <h2>Расчет по формуле (Задание 4)</h2>
+    <p>Введите значения a и b для расчета d = |a(5b^2 - 7.8b) - a| / (2.55a + 0.7b):</p>
+    <label for="inputA">Значение a:</label>
+    <input type="number" id="inputA" value="10"> <br><br>
+    <label for="inputB">Значение b:</label>
+    <input type="number" id="inputB" value="5"> <br><br>
+    <button onclick="performCalculation()">Рассчитать d</button>
+    <div id="calculationResult">
+        </div>
+
+    <script>
+        function performCalculation() {
+            const a = parseFloat(document.getElementById('inputA').value);
+            const b = parseFloat(document.getElementById('inputB').value);
+
+            //из внешнего файла
+            const result = calculateD(a, b);
+
+            const resultDiv = document.getElementById('calculationResult');
+            if (typeof result === 'string' && result.startsWith("Ошибка расчета:")) {
+                alert(result);
+                resultDiv.innerHTML = "<p style='color: red;'>" + result + "</p>";
+            } else {
+                resultDiv.innerHTML = "<p>Результат расчета d: <strong>" + result.toFixed(4) + "</strong></p>";
+            }
+        }
+    </script>
+
+
+<h2>Работа со строками (Задание 5)</h2>
+    <button onclick="processStrings()">Выполнить операции со строками</button>
+    <div id="stringOutput">
+        </div>
+
+    <script>
+        function processStrings() {
+            let s1 = "Я люблю Беларусь";
+            const s2 = "Я учусь в Политехническом колледже";
+
+            let output = "<h3>Исходные строки:</h3>";
+            output += "<p>s1: \"" + s1 + "\"</p>";
+            output += "<p>s2: \"" + s2 + "\"</p>";
+
+            const lengthS2 = s2.length;
+            output += "<h3>Длина строки s2:</h3>";
+            output += "<p>" + lengthS2 + "</p>";
+
+
+            const n = 10;
+            if (n > 0 && n <= s1.length) {
+                const nthChar = s1.charAt(n - 1); 
+                output += "<h3>" + n + "-ый символ в строке s1:</h3>";
+                output += "<p>Символ: \"" + nthChar + "\"</p>";
+
+
+                const asciiCode = nthChar.charCodeAt(0);
+                output += "<h3>ASCII-код " + n + "-го символа:</h3>";
+                output += "<p>" + asciiCode + "</p>";
+            } else {
+                output += "<h3>Ошибка:</h3>";
+                output += "<p>Невозможно выделить " + n + "-ый символ. Строка S1 слишком короткая или неверное значение n.</p>";
+            }
+
+            s1 = s1.replace("Беларусь", "Гродно");
+            output += "<h3>Строка s1 после замены:</h3>";
+            output += "<p>s1: \"" + s1 + "\"</p>";
+
+            // Вывод
+            document.getElementById('stringOutput').innerHTML = output;
+        }
+    </script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

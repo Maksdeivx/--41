@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Демонстрация JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>JavaScript</h1>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>1. Способы внедрения JavaScript</h2>
+
+            <div class="subsection">
+                <h3>1.1 Внутренний JavaScript</h3>
+                <p>Код JavaScript размещён внутри &lt;script&gt; тегов.</p>
+                <script>
+                    alert("Внутренний JS в head");
+                </script>
+            </div>
+
+            <div class="subsection">
+                <h3>1.2 Внешний JavaScript</h3>
+                <p>Подключён внешний файл <code>script.js</code>.</p>
+                <button onclick="runExternalLikeScript()">Запустить внешний скрипт</button>
+                <p>
+                    <a href="#" id="externalLinkDemo">Ссылка с внешним JS</a>
+                </p>
+            </div>
+
+            <div class="subsection">
+                <h3>1.3 Строчный JavaScript</h3>
+                <button onclick="alert('Кнопка нажата!');">Строчная кнопка кнопка</button>
+                <p>
+                    <a href="#" onclick="alert('Инлайн-ссылка!'); return false;">Строчная-ссылка</a>
+                </p>
+            </div>
+
+            <div class="subsection">
+                <h3>1.4 Динамический JavaScript</h3>
+                <button id="loadDynamicScriptButton">Загрузить динамический скрипт</button>
+                <div id="dynamicScriptOutput"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>2. Операторы JavaScript</h2>
+            <button onclick="runOperatorsDemo()">Демонстрация операторов</button>
+            <pre id="operatorsOutput"></pre>
+        </section>
+
+        <section class="card">
+            <h2>3. Диалоговые окна</h2>
+            <div class="button-row">
+                <button onclick="showAlert()">Alert</button>
+                <button onclick="showConfirm()">Confirm</button>
+                <button onclick="showPrompt()">Prompt</button>
+            </div>
+            <p id="confirmResult"></p>
+            <p id="promptResult"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

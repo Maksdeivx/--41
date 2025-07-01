@@ -1,0 +1,187 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-family:Arial;
+}
+/* Общие стили для шапки */
+header {
+    background-color: #1e1e2f; /* Тёмный фон */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Заголовок */
+header h1 {
+    margin: 0 0 10px;
+    font-size: 2em;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 1.3em;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #3a3a5c;
+}
+nav+a {
+    color:#ffd700;
+    margin-top: 15px;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+nav+a:hover{
+    color: #ffa500;
+}
+.container{
+    padding-top: 10px;
+    display:flex;
+    gap:10px;
+}
+.box{
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+    border-radius: 12px;
+    background-color:#fff4c1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.6s;
+  animation-delay: 0.2s;
+}
+
+#lists{
+    display:flex;
+    padding-top: 10px;
+}
+.skills-section {
+    display: flex;
+    margin: 30px 0;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  #skills, #hobbies, #languages {
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 0.6s;
+  animation-delay: 0.2s;
+  }
+  
+  #skills {
+    background-color: #b9f7ff;
+  }
+  
+  #hobbies {
+    background-color: #ffbad1;
+  }
+  
+  #languages {
+    background-color: #f6bcff;
+  }
+  li, dd {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  dt{
+    font-weight: bold;
+    font-size: 20px;
+  }
+.link-block a{
+  font-size: 24px; /* Размер шрифта примерно как size="5" */
+  font-weight: bold;
+  color: #ffd700; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.link-block {
+  text-align: center;
+  margin: 20px 0;
+}
+.link-block a:hover {
+  color: #ffa500; /* Темнее при наведении */
+  text-decoration: underline;
+}
+.auth-form {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+    animation: fadeInUp 0.6s;
+  animation-delay: 0.2s;
+}
+
+.auth-form fieldset {
+  border: none;
+}
+
+.auth-form p {
+  margin: 15px 0;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"],
+.auth-form input[type="date"],
+.auth-form input[type="email"],
+.auth-form input[type="tel"],
+.auth-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-form input[type="radio"] {
+  margin-left: 10px;
+}
+
+.auth-form input[type="submit"],
+.auth-form input[type="reset"] {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form input[type="submit"]:hover,
+.auth-form input[type="reset"]:hover {
+  background-color: #0056b3;
+}

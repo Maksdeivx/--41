@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Сайт-шпаргалка</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <style>
+            p
+            {
+                font-family:'Courier New', Courier, monospace;
+                font-size:20px;
+                text-align:left;
+            }
+            body{
+                background: linear-gradient(to right, #ea4eff, #9524ff)
+            }
+        </style>
+        <meta charset = "UTF-8">
+        <meta name="description" content="Сайт-шпаргалка для начинающих в изучении HTML">
+        <meta name="keywords" content="HTML, CSS, Сайт-шпаргалка">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+        <meta name="author" content="Козейко Максим">
+    </head>
+    <body>
+        <header>
+            <h1>Это пример шапки(header) сайта</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/Maksdeivx">Мой GitHub</a></li>
+                    <li><a href="https://pin.it/44IY3fMLU">Мой Pinterest</a></li>
+                </ul>
+            </nav>
+            <a href="#link">Перейти к форме авторизации</a>
+        </header>
+        <div class="container">
+        <div class="box">
+        <h1>Это заголовок h1</h1>
+        <h2>Это заголовок h2</h2>
+        <h3>Это заголовок h3</h3>
+        <h4>Это заголовок h4</h4>
+        <h5>Это заголовок h5</h5>
+        <h6>Это заголовок h6</h6>
+        </div>
+        <div class="box">
+        <p style="text-align:center;">Это первый абзац</p>
+        <p style="font-style:italic; text-align:center;">Это курсивный текст</p>
+        <p style="text-decoration:underline; text-align:center;">Это подчеркнутый текст</p>
+        <p style="font-weight:bold; text-align:center;">Это жирный текст</p>
+        <p style="text-decoration:line-through; text-align:center;">Это зачеркнутый текст</p>
+        <p style="text-align:center; text-align:center;">Это <sub>подстрочный текст</sub></p>
+        <p style="text-align:center; text-align:center;">Это <sup>надстрочный текст</sup></p>
+        </div>
+        </div>
+        <div class="skills-section">
+        <div id="skills">
+        <h2 style="font-size: 22px; margin-bottom: 15px;">Список моих навыков</h2>
+        <ol>
+            <li>Постановка целей</li>
+            <li>Ответственность</li>
+            <li>Объективность</li>
+            <li>Грамотность</li>
+
+        </ol>
+        </div>
+        <div id="hobbies">
+        <h2 style="font-size: 22px; margin-bottom: 15px;">Список моих хобби</h2>
+        <ul>
+            <li>Настольный теннис</li>
+            <li>Компьютерные игры</li>
+            <li>Путешествия</li>
+        </ul>
+        </div>
+        <div id="languages">
+        <h2 style="font-size: 22px; margin-bottom: 15px;">Список любимых языков программирования</h2>
+        <dl>
+            <dt>Python</dt>
+            <dd>Python представляет популярный высокоуровневый язык программирования, который предназначен для создания приложений различных типов.</dd>
+            <dt>C#</dt>
+            <dd>C# — это современный, инновационный, с открытым исходным кодом, кросс-платформенный объектно-ориентированный язык программирования и один из 5 лучших языков программирования на GitHub.</dd>
+            <dt>Assembler</dt>
+            <dd>Ассемблеры представляют собой языки низкого уровня, предназначеные для прямого доступа к аппаратным ресурсам компьютера.</dd>
+        </dl>
+        </div>
+        </div>
+        <div class="link-block">
+        <a href="/media/index.html">Для перехода к разделу с медиафайлами нажмите на ссылку</a></div>
+        <div class="link-block">
+        <a href="/media/tables/index.html">Для перехода к разделу с таблицами нажмите на ссылку</a></div>
+        <p id="link" style="text-align:center;"><b>Пример формы авторизации</b></p>
+        <form action="" method="POST" class="auth-form">
+            <fieldset>
+            <p>Ваш логин: 
+            <input type="text" name="login" size="15" maxlength="30" value="Ваше имя">  
+            </p> 
+            <p>Пароль: <input type="password" name="password" size="15" maxlength="30">  
+            </p>
+            <p>Выберите вариант</p>
+            <select name="form_select">
+                <option value="Значение 1">Первый</option>
+                <option value="Значение 2">Второй</option>
+                <option  selected="selected" value="Значение 3">Третий</option>
+                <option value="Значение 4">Четвертый</option>
+                <option value="Значение 5">Пятый</option>
+            </select>
+            <p>
+            <label>Возраст: <input type="text" name="age"></label><br>
+            Пол :
+            <input id="woman" type="radio" name="pol" value="w">
+            <label for="woman">Жeнcкий</label>
+            <input id="man" type="radio" name="pol" value="m">
+            <label for="man">Myжcкoй</label> 
+            </p>
+            <p>
+            <label for="depart">Введите дату:</label>
+            <input type="date" name="date">
+            </p>
+            <p>Введите email:<input type="email" name="email" maxlength="20"></p>
+            <p>    <label for="form-tel">Телефон:</label>
+                <input type="tel" name="telephone" id="form-tel"></p>
+            <input type="submit">
+            <input type="reset">
+            </fieldset>
+          </form>
+          
+
+
+
+    </body>
+    </html>

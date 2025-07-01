@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета участника программы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1 class="form-title">Анкета регистрации участника программы <br>"пРИГЛАшаем"</h1>
+            <p class="form-description">После регистрации Вы сможете обменивать накопленные бонусы на скидки при совершении покупок в аптеках сети "Ригла".</p>
+
+            <div class="form-group">
+                <label for="barcode">Введите штрих-код Вашей карты*:</label>
+                <input type="text" id="barcode">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Имя*:</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="form-group">
+                <label for="surname">Отчество:</label>
+                <input type="text" id="surname">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Дата рождения*:</label>
+                <input type="text" id="dob" placeholder="ДД.ММ.ГГГГ">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Пол*:</label>
+                <input type="text" id="gender">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Мобильный телефон*:</label>
+                <input type="text" id="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email">
+            </div>
+
+            <p class="required-fields">* Поля, обязательные для заполнения</p>
+
+            <div class="radio-group">
+                <input type="radio" id="info-all" name="info-type" checked>
+                <label for="info-all">Я желаю получать информацию об акциях программы, скидках и распродажах</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="info-no" name="info-type">
+                <label for="info-no">Я не желаю получать информацию об акциях программы</label>
+            </div>
+
+            <div class="form-group verification-group">
+                <label for="verification-code">Код подтверждения*:</label>
+                <div class="verification-input-wrapper">
+                    <input type="text" id="verification-code">
+                    <button class="send-sms-button">Выслать SMS раз</button>
+                </div>
+            </div>
+
+            <div class="checkbox-group privacy-policy">
+                <input type="checkbox" id="privacy-agreement" checked>
+                <label for="privacy-agreement">Я согласен на обработку персональных данных и ознакомлен с правилами программы</label>
+            </div>
+
+            <button class="submit-button">Применить</button>
+        </div>
+
+        <div class="product-ad-section">
+            <div class="product-details">
+                <h2 class="ad-title">ORIGAMMI DESIGN CHAIR</h2>
+                <p class="ad-subtitle">HAMMERHEAD</p>
+                <p class="ad-price">€685</p>
+
+                <div class="ad-tabs">
+                    <span class="active">DESCRIPTION</span><span>DETAILS</span>
+                </div>
+
+                <p class="ad-description">
+                    With a wide predatory stance that is streamlined for dynamic speed the Hammerhead is inherently a visually exciting new typology for seating that avoids the recycling and reissuing of how a new chair form can exist. The gill
+                </p>
+
+                <div class="ad-options">
+                    <span class="option-label">COLOR</span>
+                    <div class="color-options">
+                        <div class="color-dot brown"></div>
+                        <div class="color-dot gray"></div>
+                    </div>
+                </div>
+
+                <div class="ad-options">
+                    <span class="option-label">QUANTITY</span>
+                    <div class="quantity-control">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+
+                <div class="total-price">
+                    <span class="label">TOTAL PRICE</span>
+                    <span class="value">€3425</span>
+                </div>
+
+                <button class="add-to-cart-button">ADD TO CARD</button>
+            </div>
+            <div class="product-image-carousel">
+                <img src="кресло.png" alt="Origammi Design Chair">
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

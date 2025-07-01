@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Карточка</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 15px;
+        }
+        #node2{
+            color: black; 
+            font-size: 16px;
+            text-decoration: none; 
+            display: inline-block;
+            transition: all 0.3s ease; 
+        }
+
+
+        #node2:hover {
+            color: green; 
+            text-decoration: none; 
+            font-size: 32px; 
+            transform: scale(2);
+            transform-origin: left center;
+        }
+        #node2 a {
+            color: blue;
+            text-decoration: underline;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        #node2 a:hover {
+            color: green;
+            text-decoration: none;
+            font-size: 32px;
+            transform: scale(2);
+            transform-origin: left center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Все задания в одном HTML-документе</h1>
+
+
+    <section>
+        <p id = "node1">Козейко Максим Александрович</p>
+
+        <p id = "node2">Мой любимый сайт: <a href="https://www.youtube.com" target="_blank">Youtube</a></p>
+        <img id = "node3" src="картинка.jpg" alt="Пример изображения">
+        <div id="widthInfo" class="node-info"></div>
+    </section>
+    <script>
+
+        setTimeout(function() {
+            const documentWidth = document.documentElement.clientWidth;
+            const widthInfoDiv = document.getElementById('widthInfo');
+            if (widthInfoDiv) {
+                widthInfoDiv.textContent = `Ширина документа (viewport): ${documentWidth}px`;
+                console.log(`Ширина документа (viewport): ${documentWidth}px`);
+            }
+        }, 5000);
+
+
+
+        window.onload = function() {
+            const node1 = document.getElementById('node1');
+            const node3 = document.getElementById('node3');
+
+            if (node1 && node3) {
+
+                const clonedNode3 = node3.cloneNode(true);
+                clonedNode3.id = 'clonedNode3'; 
+
+                
+                node1.after(clonedNode3); 
+                console.log('Копия узла №3 успешно вставлена после узла №1.');
+            } else {
+                console.warn('Один из узлов (№1 или №3) не найден. Проверьте ID.');
+            }
+        };
+    </script>
+    <section>
+    <p>Информация о процессоре/платформе будет отображаться в новом окне.</p>
+    <button onclick="startDisplayingInfo()">Начать отображение информации</button>
+    
+    <script>
+        let newWindow = null; 
+        let intervalId = null; 
+
+        function startDisplayingInfo() {
+
+
+            const processorInfo = navigator.platform || 'Информация о процессоре недоступна';
+
+
+ 
+            if (newWindow === null || newWindow.closed) {
+                newWindow = window.open("", "ProcessorInfoWindow", "width=400,height=200");
+                if (!newWindow) {
+                    alert("Блокировщик всплывающих окон заблокировал новое окно. Разрешите всплывающие окна для этого сайта.");
+                    return;
+                }
+                newWindow.document.write("<!DOCTYPE html><html lang='ru'><head><title>Информация о системе</title></head><body><h1>Информация о системе:</h1><p id='infoDisplay'></p>");
+                newWindow.document.close();
+            }
+
+
+            if (intervalId !== null) {
+                clearInterval(intervalId);
+            }
+
+
+            intervalId = setInterval(function() {
+                if (newWindow && !newWindow.closed) {
+                    const infoDisplayElement = newWindow.document.getElementById('infoDisplay');
+                    if (infoDisplayElement) {
+                        infoDisplayElement.textContent = `Платформа ОС: ${processorInfo} (Обновлено в ${new Date().toLocaleTimeString()})`;
+                    }
+                } else {
+
+                    clearInterval(intervalId);
+                    intervalId = null;
+                    console.log("Новое окно закрыто, интервал остановлен.");
+                }
+            }, 4000); 
+        }
+    </script>
+    </section>
+</body>
+</html>

@@ -1,0 +1,751 @@
+body{
+    margin:0px;
+    font-family: 'Open Sans', Arial, sans-serif; /* Более близкий шрифт */
+    background-color: #f0f2f5; /* Светло-серый фон */
+    line-height: 1.5; /* Увеличенный межстрочный интервал */
+    color: #333; /* Общий цвет текста */
+}
+header{
+    display:flex;
+    background-color: #10d669;
+    justify-content: start;
+    gap:20px;
+}
+header p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:26px;
+    color:white;
+}
+.First-block{
+    border-radius: 10px;
+    display: flex;
+    background-color: #fff893;
+    margin:25px;
+    box-shadow: 5px 5px 5px rgb(204, 204, 204);
+    padding: 20px;
+    gap:10%;
+
+}
+.First-block div{
+    width:50%;
+}
+.Second-block{
+    display:flex;
+    margin:25px;
+    gap:20px;
+}
+.info{
+    border-radius: 10px;
+    background-color: #fff893;
+    box-shadow: 5px 5px 5px rgb(204, 204, 204);
+    display:flex;
+    width:50%;
+    gap:25px;
+    padding:20px;
+}
+.advantages{
+    width:50%;
+    border-radius: 10px;
+    background-color: #fff893;
+    box-shadow: 5px 5px 5px rgb(204, 204, 204);
+    padding:20px;
+}
+.Third-block{
+    display:flex;
+    border-radius: 10px;
+    background-color: #fff893;
+    box-shadow: 5px 5px 5px rgb(204, 204, 204);
+    padding:20px;
+    justify-content: space-between;
+    gap:15px;
+    margin:25px;
+}
+.white-block{
+    border-radius:10px;
+    background-color: white;
+    padding: 10px;
+}
+.fourth-block{
+    display:flex;
+    justify-content: space-between;
+    margin:25px;
+    padding:20px;
+    background-color: #fff893;
+    box-shadow: 5px 5px 5px rgb(204, 204, 204);
+}
+.fourth-block img{
+    width:20%;
+    height:400px;
+    border-radius:10px;
+}
+.fifth-block{
+    border-radius: 10px;
+    background-color: #fff893;
+    box-shadow: 5px 5px 5px rgb(204, 204, 204);
+    margin:25px;
+    display:flex;
+    gap:25px;
+    justify-content: center;
+    padding:20px;
+}
+.review{
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+}
+.sixth-block{
+    border-radius: 10px;
+    background-color: #fff893;
+    box-shadow: 5px 5px 5px rgb(204, 204, 204);
+    display:grid;
+    margin:25px;
+    padding:20px;
+    grid-template: 1fr / 25% 25% 25% 23.25%;
+    gap:10px;
+}
+.sixth-block div{
+    display:grid;
+    height:300px;
+    place-items:center;
+    text-align:center;
+    border-radius:10px;
+    background-color: white;
+    padding: 10px;
+}
+.seventh-block{
+    display:grid;
+    grid-template:100% / 40% 60%;
+}
+footer{
+    color:rgb(194, 194, 194);
+    background-color: #141414;
+    display:grid;
+    grid-template: 100%/ 25% 25% 25% 25%;
+}
+iframe{
+    width: 90%;
+}
+.burger{
+    display:none;
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    header p {
+        font-size: 20px;
+    }
+
+    .First-block, .Second-block, .Third-block, .fourth-block, .fifth-block, .sixth-block {
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .First-block div, .info, .advantages {
+        width: 100%;
+    }
+
+    .Third-block, .fifth-block {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .white-block {
+        width: 100%;
+    }
+
+    .fourth-block {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fourth-block img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sixth-block {
+        grid-template-columns: 100%;
+    }
+
+    .seventh-block {
+        grid-template-columns: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    footer {
+        grid-template-columns: 100%;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+@media (max-width: 1024px) {
+    .First-block, .Second-block, .Third-block, .fifth-block, .fourth-block, .sixth-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Second-block {
+        flex-direction: column;
+    }
+
+    .info, .advantages {
+        width: 90%;
+    }
+
+    .Third-block {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .white-block {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .fourth-block img {
+        width: 45%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .fifth-block {
+        flex-wrap: wrap;
+    }
+
+    .sixth-block {
+        grid-template-columns: 50% 50%;
+    }
+
+    .seventh-block {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    footer {
+        grid-template-columns: 50% 50%;
+        padding: 10px;
+    }
+    .burger{
+        display:flex !important;
+        width:32px;
+        height:32px;
+        background-color: transparent;
+        border:none;
+        align-self:center;
+    }
+    header nav{
+        display:none;
+    }
+}
+.burger-nav{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.burger-nav a{
+    text-decoration:none;
+    color:black;
+}
+
+/* Styles from the new content */
+.form-product-container { /* A new class for the integrated container */
+    display: flex;
+    flex-direction: column; /* Элементы будут в колонку */
+    background-color: #fff;
+    border-radius: 8px; /* Немного скругленные углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Более выраженная тень */
+    max-width: 900px; /* Оптимальная ширина */
+    width: 100%;
+    overflow: hidden;
+    margin: 40px auto; /* Центрируем контейнер с отступами */
+}
+
+/* Form Section Styles */
+.form-section {
+    padding: 35px 50px; /* Большие внутренние отступы */
+    border-bottom: 1px dashed #e0e0e0; /* Тонкая пунктирная линия */
+    padding-bottom: 30px; /* Отступ снизу от линии */
+}
+
+.form-title {
+    font-family: 'Roboto', sans-serif; /* Более плотный шрифт */
+    font-size: 24px; /* Точный размер */
+    font-weight: 600; /* Более жирный */
+    text-align: center;
+    color: #333; /* Темный текст */
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.form-description {
+    font-size: 14px; /* Уменьшенный размер */
+    color: #777;
+    text-align: center;
+    margin-bottom: 30px; /* Увеличенный отступ */
+    line-height: 1.4;
+}
+
+.form-group {
+    margin-bottom: 18px; /* Увеличенный отступ между группами */
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px; /* Небольшой отступ от поля */
+    color: #555;
+    font-size: 13px; /* Меньший размер */
+    font-weight: 600; /* Жирный шрифт */
+    text-transform: uppercase; /* В верхнем регистре */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: calc(100% - 24px); /* Учитываем padding и border */
+    padding: 11px; /* Чуть больше padding */
+    border: 1px solid #ccc; /* Более заметная рамка */
+    border-radius: 5px; /* Слегка скругленные */
+    font-size: 15px; /* Средний размер текста в поле */
+    color: #333;
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.required-fields {
+    font-size: 12px; /* Очень маленький размер */
+    color: #999;
+    margin-top: -8px; /* Поднимаем ближе к последнему полю */
+    margin-bottom: 20px;
+}
+
+.radio-group {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    padding-left: 0; /* Без отступа */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px; /* Меньше отступ */
+    width: 16px; /* Явный размер радио-кнопок */
+    height: 16px;
+    cursor: pointer;
+}
+
+.radio-group label {
+    color: #555;
+    font-size: 14px; /* Средний размер */
+    font-weight: normal;
+}
+
+.verification-group {
+    margin-top: 25px; /* Больший отступ сверху */
+    margin-bottom: 25px;
+}
+
+.verification-input-wrapper { /* Новый враппер для инпута и кнопки */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.verification-input-wrapper input {
+    flex-grow: 1;
+    width: auto; /* Сброс ширины для flex-grow */
+}
+
+.send-sms-button {
+    background-color: #66ccff; /* Голубой */
+    color: #fff;
+    padding: 8px 18px; /* Увеличенный padding */
+    border: none;
+    border-radius: 5px; /* Скругленные углы */
+    font-size: 14px; /* Средний размер */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Чтобы кнопка не переносила текст */
+}
+
+.send-sms-button:hover {
+    background-color: #4dc2ff;
+}
+
+.checkbox-group.privacy-policy {
+    margin-top: 25px; /* Больший отступ сверху */
+    margin-bottom: 35px; /* Больший отступ снизу */
+    padding-left: 0;
+    align-items: flex-start; /* Выравнивание по верху */
+}
+
+.checkbox-group.privacy-policy input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    margin-top: 3px; /* Немного опустить для выравнивания */
+    cursor: pointer;
+}
+
+.checkbox-group.privacy-policy label {
+    font-size: 14px;
+    color: #555;
+    font-weight: normal;
+}
+
+.submit-button {
+    background-color: #5cb85c; /* Зеленый */
+    color: #fff;
+    padding: 14px 40px; /* Большой padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 17px; /* Крупный текст */
+    font-weight: 600; /* Жирный */
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Легкая тень */
+}
+
+.submit-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Product Ad Section Styles */
+.product-ad-section {
+    display: flex;
+    background-color: #2e2e2e; /* Более темный фон */
+    color: #fff;
+    padding: 40px; /* Большие отступы */
+    gap: 40px; /* Больше отступа между блоками */
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем содержимое */
+}
+
+.product-details {
+    flex: 1;
+    min-width: 320px; /* Минимальная ширина для деталей */
+    padding-right: 20px; /* Небольшой отступ справа */
+}
+
+.ad-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px; /* Очень крупный заголовок */
+    margin-bottom: 2px;
+    color: #f5f5f5; /* Светлее */
+    font-weight: 700; /* Очень жирный */
+    letter-spacing: 1px; /* Небольшой межбуквенный интервал */
+}
+
+.ad-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Средний размер */
+    color: #bbb; /* Светлее */
+    margin-bottom: 25px;
+    font-weight: 400;
+    text-transform: uppercase; /* В верхнем регистре */
+    letter-spacing: 0.5px;
+}
+
+.ad-price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px; /* Огромный размер */
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px; /* Больший отступ */
+}
+
+.ad-tabs {
+    display: flex;
+    gap: 25px; /* Увеличенный отступ между табами */
+    margin-bottom: 25px;
+    border-bottom: 1px solid #444; /* Более темная линия */
+    padding-bottom: 8px; /* Отступ снизу от линии */
+}
+
+.ad-tabs span {
+    font-size: 14px; /* Мелкий текст */
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #aaa;
+    position: relative;
+    padding-bottom: 5px;
+    font-weight: 600; /* Жирнее */
+    letter-spacing: 0.5px;
+}
+
+.ad-tabs span.active {
+    color: #fff;
+    font-weight: 700;
+}
+
+.ad-tabs span.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 3px; /* Толще линия */
+    background-color: #fff;
+}
+
+.ad-description {
+    font-size: 14px; /* Мелкий текст */
+    color: #ccc;
+    margin-bottom: 30px;
+    line-height: 1.6; /* Хороший межстрочный интервал */
+}
+
+.ad-options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Увеличенный отступ */
+}
+
+.ad-options .option-label {
+    font-size: 13px; /* Мелкий размер */
+    color: #bbb;
+    margin-right: 30px; /* Больший отступ */
+    min-width: 80px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.color-options {
+    display: flex;
+    gap: 12px; /* Увеличенный отступ между точками */
+}
+
+.color-dot {
+    width: 24px; /* Больше размер */
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1); /* Внутренняя тень для эффекта */
+    transition: border-color 0.2s ease;
+}
+
+.color-dot:hover {
+    border-color: #fff; /* Подсветка при наведении */
+}
+
+.color-dot.brown {
+    background-color: #8B4513; /* SaddleBrown */
+}
+
+.color-dot.gray {
+    background-color: #A9A9A9; /* DarkGray */
+}
+
+.quantity-control {
+    display: flex;
+    border: 1px solid #555;
+    border-radius: 5px; /* Слегка скругленные */
+    overflow: hidden;
+    background-color: #3a3a3a; /* Более темный фон */
+}
+
+.quantity-control button {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    padding: 8px 15px; /* Больше padding */
+    font-size: 1.2em; /* Крупнее */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.quantity-control button:hover {
+    background-color: #555;
+}
+
+.quantity-control span {
+    padding: 8px 20px; /* Больше padding */
+    color: #fff;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 25px; /* Достаточная ширина для цифры */
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 40px; /* Больший отступ */
+    margin-bottom: 30px;
+}
+
+.total-price .label {
+    font-size: 14px;
+    color: #bbb;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.total-price .value {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px; /* Крупный размер */
+    font-weight: 700;
+    color: #fff;
+}
+
+.add-to-cart-button {
+    background-color: #ff6600; /* Оранжевый */
+    color: #fff;
+    padding: 16px 35px; /* Большой padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Крупный текст */
+    font-weight: 700; /* Очень жирный */
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase; /* В верхнем регистре */
+    letter-spacing: 1px;
+    box-shadow: 0 3px 10px rgba(255, 102, 0, 0.4); /* Оранжевая тень */
+}
+
+.add-to-cart-button:hover {
+    background-color: #e65c00;
+}
+
+.product-image-carousel {
+    flex: 1;
+    min-width: 350px; /* Большая минимальная ширина для изображения */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image-carousel img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Скругленные углы */
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Более выраженная тень */
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 10px; /* Больший отступ между точками */
+}
+
+.carousel-dots .dot {
+    width: 12px; /* Больше размер */
+    height: 12px;
+    background-color: #777;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: #fff;
+}
+
+/* Responsive Adjustments for new content */
+@media (max-width: 960px) {
+    .form-product-container {
+        max-width: 100%; /* На средних экранах растягиваем на всю ширину */
+        border-radius: 0;
+        box-shadow: none;
+        margin: 20px auto;
+    }
+    .form-section {
+        padding: 30px;
+    }
+    .product-ad-section {
+        flex-direction: column; /* Элементы будут в колонку */
+        padding: 30px;
+        gap: 30px;
+    }
+    .product-details, .product-image-carousel {
+        min-width: unset;
+        width: 100%; /* Занимают всю доступную ширину */
+        padding-right: 0;
+    }
+    .product-image-carousel img {
+        max-width: 80%; /* Уменьшаем изображение, чтобы оно не было слишком большим */
+    }
+}
+
+@media (max-width: 600px) {
+    /* Existing @media (max-width: 600px) rules for IT-soft site are still here */
+    
+    .form-section, .product-ad-section {
+        padding: 20px;
+    }
+    .form-title {
+        font-size: 20px;
+    }
+    .ad-title {
+        font-size: 28px;
+    }
+    .ad-price {
+        font-size: 34px;
+    }
+    .submit-button, .add-to-cart-button {
+        width: 100%; /* Кнопки на всю ширину */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 14px 20px;
+    }
+    .form-group input, .verification-input-wrapper input {
+        width: calc(100% - 20px);
+    }
+    .verification-group {
+        flex-direction: column; /* Элементы группы верификации в столбец */
+        align-items: flex-start;
+    }
+    .verification-input-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .form-title {
+        font-size: 18px;
+    }
+    .ad-title {
+        font-size: 24px;
+    }
+    .ad-price {
+        font-size: 30px;
+    }
+}
