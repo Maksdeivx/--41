@@ -1,0 +1,12 @@
+[
+  {"id": 1, "name": "Шкаф-купе Капелла 151", "price": 18000, "category": "coupe", "img": "./img/image_1155.png"},
+  {"id": 2, "name": "Кухня ТЕЯ Серебро", "price": 25900, "category": "kitchen", "img": "./img/image_1156.png"},
+  {"id": 3, "name": "Шкаф Невада", "price": 21500, "category": "wardrobe", "img": "./img/image_392.png"},
+  {"id": 4, "name": "Комод Сити", "price": 8500, "category": "dresser", "img": "./img/image_393.png"},
+  {"id": 5, "name": "Прихожая Милан", "price": 23700, "category": "hallway", "img": "./img/Прихожие_1.png"},
+  {"id": 6, "name": "Стенка Лофт", "price": 34900, "category": "lounge", "img": "./img/гостинная.png"},
+  {"id": 7, "name": "Кровать Эмма", "price": 15000, "category": "bedroom", "img": "./img/спальня.png"},
+  {"id": 8, "name": "Кухня Вега Лайт", "price": 31900, "category": "kitchen", "img": "./img/Кухни_1.png"},
+  {"id": 9, "name": "Шкаф-купе Сити", "price": 19800, "category": "coupe", "img": "./img/image_1155.png"},
+  {"id": 10, "name": "Тумба ТВ", "price": 5400, "category": "dresser", "img": "./img/image_393.png"}
+]
