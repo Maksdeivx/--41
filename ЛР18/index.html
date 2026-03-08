@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа: Формы и RegExp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Работа с формами и регулярными выражениями</h1>
+
+    <!-- ЗАДАНИЕ 1 и 2: Пользовательская форма и Валидация -->
+    <section class="card">
+        <h2>Задание 1 & 2: Форма регистрации и Валидация</h2>
+        <form id="mainForm" novalidate>
+            <!-- Текстовое поле (HTML5 Validation: required, minlength) -->
+            <div class="form-group">
+                <label>ФИО:</label>
+                <input type="text" id="userName" name="fullname" placeholder="Иванов Иван" required minlength="3">
+                <small class="error-msg" id="nameError"></small>
+            </div>
+
+            <!-- Email (Regex Validation) -->
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" id="userEmail" name="email" placeholder="example@mail.ru">
+                <small class="error-msg" id="emailError"></small>
+            </div>
+
+            <!-- Переключатели (Radio) -->
+            <div class="form-group">
+                <label>Пол:</label>
+                <input type="radio" name="gender" value="Мужской" checked> Мужской
+                <input type="radio" name="gender" value="Женский"> Женский
+            </div>
+
+            <!-- Флажки (Checkboxes) -->
+            <div class="form-group">
+                <label>Интересы:</label>
+                <input type="checkbox" name="interest" value="Программирование"> IT
+                <input type="checkbox" name="interest" value="Дизайн"> Дизайн
+                <input type="checkbox" name="interest" value="Маркетинг"> Маркетинг
+            </div>
+
+            <!-- Список (Select) -->
+            <div class="form-group">
+                <label>Город:</label>
+                <select id="userCity" name="city">
+                    <option value="">Выберите город</option>
+                    <option value="Москва">Гродно</option>
+                    <option value="Минск">Минск</option>
+                    <option value="Астана">Брест</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">Отправить данные</button>
+            <button type="button" onclick="extractData()" class="btn-info">Получить данные (Задание 1)</button>
+        </form>
+
+        <div id="formOutput" class="output-box"></div>
+    </section>
+
+    <!-- ЗАДАНИЕ 3: Работа с RegExp -->
+    <section class="card">
+        <h2>Задание 3: Методы RegExp и String</h2>
+        
+        <div class="form-group">
+            <label>Тестовая строка:</label>
+            <input type="text" id="regexInput" value="Мама мыла раму, 123, papa@mail.ru">
+        </div>
+
+        <div class="button-grid">
+            <button onclick="demoTest()">test() (Есть ли цифры?)</button>
+            <button onclick="demoExec()">exec() (Поиск email)</button>
+            <button onclick="demoMatch()">match() (Все слова)</button>
+            <button onclick="demoReplace()">replace() (Скрыть цифры)</button>
+            <button onclick="demoSearch()">search() (Индекс @)</button>
+            <button onclick="demoSplit()">split() (Разбить по запятой)</button>
+        </div>
+
+        <div id="regexOutput" class="output-box">Результат появится здесь...</div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
