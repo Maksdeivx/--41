@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Интерфейсные события</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 5. Событие прокрутки (Индикатор прогресса сверху) -->
+    <div id="scroll-progress"></div>
+
+    <div class="container">
+        <h1>Примеры интерфейсных событий</h1>
+
+        <!-- 1. События мыши -->
+        <section class="event-section">
+            <h2>1. События мыши (Mouse Events)</h2>
+            <button id="mouseBtn" class="btn">Нажми или наведи на меня</button>
+            <p id="mouseText">Результат: ожидание действия...</p>
+        </section>
+
+        <!-- 2. События клавиатуры -->
+        <section class="event-section">
+            <h2>2. События клавиатуры (Keyboard Events)</h2>
+            <input type="text" id="keyboardInput" placeholder="Печатайте здесь...">
+            <p id="keyboardText">Клавиша: -</p>
+        </section>
+
+        <!-- 3. Drag & Drop события -->
+        <section class="event-section">
+            <h2>3. Drag & Drop (Перетаскивание)</h2>
+            <div class="drag-container">
+                <div id="dragItem" draggable="true">Перетащи меня</div>
+                <div id="dropZone">Бросай сюда</div>
+            </div>
+        </section>
+
+        <!-- 4. События указателя (Pointer Events) -->
+        <section class="event-section">
+            <h2>4. События указателя (Pointer)</h2>
+            <div id="pointerArea">Нажми (мышью, пальцем или пером)</div>
+            <p id="pointerText">Координаты: X:0, Y:0</p>
+        </section>
+
+        <!-- 6. События сенсорных экранов -->
+        <section class="event-section">
+            <h2>6. Сенсорные события (Touch)</h2>
+            <div id="touchBox">Коснись меня пальцем</div>
+            <p id="touchStatus">Статус: касания нет</p>
+        </section>
+
+        <!-- 7. События таймера -->
+        <section class="event-section">
+            <h2>7. События таймера</h2>
+            <div id="timerDisplay">Оставшееся время: 10 сек</div>
+            <button onclick="startTimer()" class="btn">Запустить обратный отсчет</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
