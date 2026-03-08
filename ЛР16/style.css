@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #2c3e50;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-ui {
+    position: absolute;
+    top: 10px;
+    pointer-events: none;
+}
+
+canvas {
+    display: block;
+    background: #34495e;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
