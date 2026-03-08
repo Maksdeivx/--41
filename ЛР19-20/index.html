@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин и Хранилища</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>TechStore</h1>
+    <div class="cart-icon" onclick="toggleCart()">🛒 Корзина (<span id="cart-count">0</span>)</div>
+</header>
+
+<main>
+    <!-- ЗАДАНИЕ 1: КАТАЛОГ -->
+    <section id="catalog" class="catalog-grid"></section>
+
+    <!-- КОРЗИНА (скрытая по умолчанию) -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Ваша корзина</h2>
+            <div id="cart-items"></div>
+            <hr>
+            <p>Итого: <span id="cart-total">0</span> руб.</p>
+            <button onclick="clearCart()">Очистить корзину</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ЗАДАНИЕ 2 и 3: ФОРМА ДАННЫХ -->
+    <section class="user-data">
+        <h2>Личные данные (Cookie & LocalStorage)</h2>
+        <form id="userForm">
+            <input type="text" id="fio" placeholder="ФИО" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="date" id="dob" title="Дата рождения">
+            <input type="text" id="pob" placeholder="Место рождения">
+            <textarea id="hobbies" placeholder="Увлечения"></textarea>
+            
+            <div class="actions">
+                <p>Cookie:</p>
+                <button type="button" onclick="saveToCookie()">Сохранить в Cookie</button>
+                <button type="button" onclick="loadFromCookie()">Загрузить из Cookie</button>
+                <button type="button" onclick="clearCookie()">Очистить Cookie</button>
+            </div>
+
+            <div class="actions">
+                <p>Local Storage:</p>
+                <button type="button" onclick="saveToLS()">Сохранить в LS</button>
+                <button type="button" onclick="loadFromLS()">Загрузить из LS</button>
+                <button type="button" onclick="clearLS()">Очистить LS</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
